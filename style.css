@@ -4,26 +4,36 @@ body
     margin: 0;
     border: 0;
     background-color: white;
+    
     display: grid;
-    grid-template-columns: 20vw 80vw;
-    grid-template-rows: 30vh 70vh;
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: 30vh auto;
 }
 header
 {
     grid-row: 1;
     grid-column: 1 / 3;
     background-color: rgba(185, 143, 0, 0.3);
+    background-image: url("Images/header.jpg");
     border: solid;
     border-width: 0;
     border-bottom-width: 5px;
-    border-color: rgb(185, 143, 0);
+    border-color: rgb(255, 164, 247);
     padding-left: 30px;
+}
+header h1
+{
+    font-size: 50px;
 }
 aside
 {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
-    background-color: rgb(175, 143, 0);
+    background-color: white;
+    border: solid;
+    border-width: 0;
+    border-right-width: 5px;
+    border-color: rgb(255, 164, 247);
 }
 main
 {
@@ -38,6 +48,51 @@ main article
     margin: 10px;
     flex-grow: 1;
     flex-basis: auto;
-    min-width: 20%;
+    min-width: 25%;
+    max-width: 29%;
     padding-left: 2%;
+    display: grid;
+    grid-template-columns: 10fr 2fr 1fr;
+    grid-template-rows: 25fr 70fr 20fr;
+}
+main article h3
+{
+    grid-area: 1 / 1 / 2/ 2;
+    text-decoration: green;
+    color: black;
+    font-size: 25px;
+}
+main article p
+{
+    grid-area: 2 / 1 / 3 / 2;
+}
+main article img
+{
+    padding-left: 100px;
+    max-height: 230px;
+    grid-area:2 / 2 / 3 / 3;
+}
+main article .rating
+{
+    grid-area: 3 / 1 / 4 / 2;
+    font-size: 20px;
+}
+ul
+{
+    position: fixed;
+    list-style-type: none;
+}
+ul li
+{
+    padding-top: 20px;
+}
+ul li :hover
+{
+    color: black;
+}
+ul li a
+{
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
 }
