@@ -61,11 +61,38 @@ aside
     grid-template-columns: 10fr 2fr 1fr;
     grid-template-rows: 25fr 70fr 20fr;
 }
+.infoContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.infoContainer article
+{
+    background: rgb(255,0,202);
+    background: linear-gradient(45deg, rgba(255,0,202,0.50) 0%, rgba(106,0,255,0.40) 100%); 
+    margin: 10px;
+    flex-grow: 1;
+    flex-basis: auto;
+    padding-left: 2%;
+    display: grid;
+    grid-template-columns: 10fr 2fr 1fr;
+    grid-template-rows: 25fr 70fr 20fr;
+}
 main article h3
 {
     grid-area: 1 / 1 / 2/ 2;
     color: black;
     font-size: 25px;
+}
+main article a
+{
+    text-decoration: none;
+}
+main article a :hover
+{
+    color: rgb(255,0,202);
 }
 main article p
 {
@@ -73,9 +100,12 @@ main article p
 }
 main article img
 {
-    padding-left: 100px;
+    margin-left: 100px;
     max-height: 230px;
     grid-area:2 / 2 / 3 / 3;
+    border: solid;
+    border-radius: 10px;
+    border-color: rgb(255,0,202);
 }
 main article .rating
 {
@@ -102,4 +132,27 @@ ul li a
     font-size: 25px;
     text-decoration: none;
     color: black;
+}
+#productContainer
+{
+    display: grid;
+}
+#productContainer article
+{
+    background: rgb(255,0,202);
+    background: linear-gradient(45deg, rgba(255,0,202,0.50) 0%, rgba(106,0,255,0.40) 100%); 
+    margin: 10px;
+    padding-left: 2%;
+    display: grid;
+    grid-template-columns: 40vw 20vw 20vw;
+    grid-template-rows: 10vh 40vh 7vh;
+}
+#productContainer article h2
+{
+    font-size: 40px;
+}
+#productContainer article img
+{
+    margin-left: 100px;
+    max-height: 300px;
 }
